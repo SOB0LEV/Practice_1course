@@ -14,7 +14,8 @@ int main() {
 
 	printf("Hello! This program checks if a point belongs to a triangle.");
 	while (true) {
-		
+		input_points(pa, pb, pc, pp);
+		solution(pa, pb, pc, pp);
 	}
 
 	return 0;
