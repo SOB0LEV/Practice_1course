@@ -1,7 +1,13 @@
 #include "header.h"
 
 void solution(struct point* pa, struct point* pb, struct point* pc, struct point* pp) {
-	
+	float res1, res2, res3;
+
+	res1 = (pa->x - pp->x) * (pb->y - pa->y) - (pb->x - pa->x) * (pa->y - pp->y);
+	res2 = (pb->x - pp->x) * (pc->y - pb->y) - (pc->x - pb->x) * (pb->y - pp->y);
+	res3 = (pc->x - pp->x) * (pa->y - pc->y) - (pa->x - pc->x) * (pc->y - pp->y);
+
+	show_result(res1, res2, res3);
 }
 void input_points(struct point* pa, struct point* pb, struct point* pc, struct point* pp) {
 	//Input A
