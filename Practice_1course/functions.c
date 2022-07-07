@@ -63,5 +63,17 @@ void input_points(struct point* pa, struct point* pb, struct point* pc, struct p
 	}
 }
 int show_result(float res1, float res2, float res3) {
-	
+	if ((res1 >= 0 && res2 >= 0 && res3 >= 0) || (res1 <= 0 && res2 <= 0 && res3 <= 0)) {
+
+		if (res1 == 0 || res2 == 0 || res3 == 0) {
+			printf("The point belongs to the triangle. It is on side or apex.\n");
+			return 2;
+		}
+		printf("The point belongs to the triangle.\n");
+		return 1;
+	}
+	else {
+		printf("The point doesn't belong to the triangle.\n");
+		return 0;
+	}
 }
